@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>FRS Gaz</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <a href="index.html">ANASAYFA</a><br>
+            <div class="theLine"></div><br>
+            <a href="about.html">HAKKIMIZDA</a><br>
+            <div class="theLine"></div><br>
+            <a href="hesap.html">HESAPLAMA ARACI</a><br>
+            <div class="theLine"></div><br>
+            <a href="contact.html">İLETİŞİM</a><br>
+            <div class="theLine"></div><br>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                     <div class="left">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                          <i class="icon icon-bars"></i></a>
+                        -->
+                        <a href="#" class="link icon-only open-panel"><img class="menuBtn" src="img/menu.png"></a>
+                    </div>
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <!-- <div class="center sliding">Awesome App</div> -->
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        <img class="logo" src="img/logo.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="about" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="leftAlign contentContainer"><br><br>
+                                <div class="titleDiv">
+                                <h1>HAKKIMIZDA</h1>
+                                </div>
+                                <br><br><br>
+                                FRS 2001 yılında Ankara’da doğalgaz ekipmanları üretmek üzere kurulmuştur. Türkiye’nin ilk doğalgaz regülatörleri , doğalgaz selenoid vanaları , doğalgaz filtreleri üretmeye başlayan firma olmuştur.<br><br>
+
+                                Geçen yıllarda üretim yelpazesini genişleterek , doğalgaz relief vanaları , doğalgaz küresel vanaları , doğalgaz deprem vanası , doğalgaz paslanmaz 3 yollu (3 way) manifoldu , doğalgaz manometreleri , CAKA yüksek basınç regülatörleri , CAKA-XL Aksiyal Akışlı yüksek basınç regülatörleri , CAKA-PL Pilotlu yüksek basınç regülatörleri , doğalgaz istasyonları , RMS A , RMS B , RMS C ve Bölge istasyonları , gaz alarm cihazları üretimine başlamıştır.<br><br>
+
+                                2010 yılı içinde firmamız doğalgaz sayaçları üretim çalışmalarına başlamıştır. Sektörel anlamda birçok ilki ortaya koyduğu ürünlerle ispatlamış olan FRS ; yurt içi pazardaki yerini kalitesi ve ürün çeşitliliği ile korur iken yurtdışı pazara da yönelmiş ve İtalya , İran , İspanya , Yunanistan , Bulgaristan , Romanya , Azerbeycan , Ermenistan , Irak pazarlarına OEM ve/veya kendi markası ile satışlara başlamıştır.<br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

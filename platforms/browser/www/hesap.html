@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="stylesheet" type="text/css" href="js/rangeslider.css">
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
+    <script src="js/rangeslider.js"></script>
+
+     <script>
+        $(document).ready(function(){
+            alert('asfasf');
+        });
+    // Initialize a new plugin instance for all
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider();
+
+    // Destroy all plugin instances created from the
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider('destroy');
+
+    // Update all rangeslider instances for all
+    // e.g. $('input[type="range"]') elements.
+    // Usefull if you changed some attributes e.g. `min` or `max` etc.
+    $('input[type="range"]').rangeslider('update', true);
+    </script>
+    
+
+
+   
+
+    <!-- Your app title -->
+    <title>FRS Gaz - Hesaplama</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <a href="index.html">ANASAYFA</a><br>
+            <div class="theLine"></div><br>
+            <a href="about.html">HAKKIMIZDA</a><br>
+            <div class="theLine"></div><br>
+            <a href="hesap.html">HESAPLAMA ARACI</a><br>
+            <div class="theLine"></div><br>
+            <a href="contact.html">İLETİŞİM</a><br>
+            <div class="theLine"></div><br>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                     <div class="left">
+                        <a href="#" class="link icon-only open-panel"><img class="menuBtn" src="img/menu.png"></a>
+                    </div>
+                    <div class="right">
+                        <img class="logo" src="img/logo.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="hesap" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <div class="leftAlign contentContainer">
+                                <br><br><br>
+                                <div class="titleDiv">
+                                <h1>HESAPLAMA ARACI</h1>
+                                </div>
+                                <br><br><br>
+                                <h3>Bağlantı Çapı</h3><br>
+                                <select id="baglanti" name="baglanti">
+                                    <option value="32">DN 32 x DN 32</option>
+                                    <option value="40">DN 40 x DN 40</option>
+                                    <option value="50">DN 50 x DN 50</option>
+                                    <option value="80">DN 80 x DN 80</option>
+                                    <option value="100">DN 100 x DN 100</option>
+                                    <option value="0">Farketmez</option>
+                                </select>
+                                <br><br>
+                                <h3>P Max</h3><br>
+                                <select id="pMax" name="pMax">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br><br>
+                                <h3>P Çıkış</h3>
+                                <div class="container">
+                                 <div class="range-slider">
+                                    <span id="rs-bullet" class="rs-label">21</span>
+                                    <input id="rs-range-line" class="rs-range" type="range" value="21" min="21" max="300">
+                                  </div>
+                                </div><br><br>
+                                <h3>P Giriş</h3>
+                                <div class="container">
+                                 <div class="range-slider">
+                                    <span id="rs-bullet2" class="rs-label2">168</span>
+                                    <input id="rs-range-line2" class="rs-range2" type="range" value="168" min="168" max="1740">
+                                  </div>
+                                </div>
+                                <br><br>
+                                <a id="getirBtn" class="getirBtn">GETİR</a><a href="teklif.html" class="getirBtn" style="margin-left: 10px;">Hemen Teklif Al</a><br><br><br>
+                                <div id="getirTitle"><h2>Sizin için önerilerimiz</h2></div><br><br>
+                                <div id="getirContent" class="getirCont">- FRG 32 YB</div>
+                                <div id="getirContent2" class="getirCont">- FRG 40 YB</div>
+                                <div id="getirContent3" class="getirCont">- FRG 50 YB</div>
+                                <div id="getirContent4" class="getirCont">- FRG 65 YB</div>
+                                <div id="getirContent5" class="getirCont">- FRG 80 YB</div>
+                                <div id="getirContent6" class="getirCont">- FRG 100 YB</div><br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
